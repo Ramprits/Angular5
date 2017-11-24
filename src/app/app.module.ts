@@ -8,18 +8,21 @@ import { DashboardComponent } from './dashboard.component';
 
 // Primeng Api here
 import { PanelModule } from 'primeng/primeng';
+import { ApiUrlService } from './shared/apiUrl.service';
+import { HttpClientModule } from '@angular/common/http';
+import { DepartmentService } from './department/department.service';
 
 @NgModule({
   declarations: [
     AppComponent, DashboardComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, HttpClientModule,
     BrowserAnimationsModule,
     PanelModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ApiUrlService, DepartmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
