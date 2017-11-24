@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-primary">
+<nav class="navbar navbar-expand-lg bg-info">
     <div class="container">
         <div class="navbar-translate">
             <a class="navbar-brand" [routerLink]="['/home']">
@@ -34,4 +34,14 @@
         </div>
     </div>
 </nav>
-<router-outlet></router-outlet>
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-9">
+        <router-outlet>
+            <span class="glyphicon glyphicon-refresh glyphicon-spin spinner" *ngIf="loading">
+                <i class="fa fa-refresh" style="color:rgb(255, 94, 0)" aria-hidden="true"></i>
+            </span>
+        </router-outlet>
+    </div>
+</div>
