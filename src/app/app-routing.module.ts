@@ -6,6 +6,9 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'home', loadChildren: 'app/home/home.module#HomeModule' },
+  { path: 'client', loadChildren: 'app/client/client.module#ClientModule' },
+  { path: 'department', loadChildren: 'app/department/department.module#DepartmentModule' },
+  { path: 'contact', loadChildren: 'app/contact/contact.module#ContactModule' },
 ];
 
 @NgModule({

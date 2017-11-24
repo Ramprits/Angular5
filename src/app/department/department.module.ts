@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { DepartmentComponent } from './department.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule, RouterModule.forChild([
+      { path: '', pathMatch: 'full', redirectTo: 'department' },
+      { path: 'department', component: DepartmentComponent }
+    ])
   ],
-  declarations: []
+  declarations: [DepartmentComponent]
 })
 export class DepartmentModule { }
